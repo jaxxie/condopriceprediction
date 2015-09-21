@@ -55,4 +55,3 @@ knit        : slidify::knit2slides
 
 ![width](assets/img/final_app.png)
 
----

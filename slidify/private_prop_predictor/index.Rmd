@@ -45,4 +45,3 @@ model
 
 ![width](assets/img/final_app.png)
 
----
