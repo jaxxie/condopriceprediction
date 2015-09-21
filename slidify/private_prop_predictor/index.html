@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Predicting Private Condo/Apartment Price in Singapore</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Predicting Private Condo/Apartment Price in Singapore">
+  <meta name="author" content="Jax Xie Jianxin">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Predicting Private Condo/Apartment Price in Singapore</h1>
+    <h2>With Urban Development Authority of Singapore Sep 2013 to Sep 2015 data</h2>
+    <p>Jax Xie Jianxin<br/>Data Scientist</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Objective</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>To determine factors that affect private condo/apartment prices in Singapore</li>
+<li>And to eventually predict the price given attributes of a property</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data Source</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>We are using official data source from Urban Development Authority of Singapore. </li>
+<li>Sales of private condo/apartment from Sep 2013 to Sep 2015 is used.</li>
+<li>We use a few features such as area of apartment, sales type, and location to determine the price.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Modeling</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>We use a linear model to model the price of the apartment. Here is the results of the model.</li>
+</ul>
+
+<pre><code>## 
+## Call:
+## lm(formula = Price ~ Area.in.Sqft + Market.Segment + Postal.District + 
+##     Type.of.Sale, data = data &lt;- train)
+## 
+## Coefficients:
+##          (Intercept)          Area.in.Sqft     Market.SegmentOCR  
+##               877388                  1538               -876572  
+##    Market.SegmentRCR       Postal.District    Type.of.SaleResale  
+##              -635675                -16605               -451186  
+## Type.of.SaleSub Sale  
+##               -16328
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Final Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The final application is one where you can enter the attributes of the property to get the predicted price. </li>
+<li>It can be found at <a href="https://jaxxie.shinyapps.io/condopricepredictor">https://jaxxie.shinyapps.io/condopricepredictor</a></li>
+</ul>
+
+<p><img src="assets/img/final_app.png" alt="width"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Objective'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Data Source'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Modeling'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Final Application'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='NA'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

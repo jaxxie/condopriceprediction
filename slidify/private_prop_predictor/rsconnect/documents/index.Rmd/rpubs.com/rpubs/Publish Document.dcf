@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+bundleId:
+        https://api.rpubs.com/api/v1/document/110600/dc4d5e94e5894250bd25ebdef3aa192e
+url: http://rpubs.com/jaxxie/110600
+when: 1442835373.10657
