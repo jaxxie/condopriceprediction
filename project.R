@@ -67,3 +67,6 @@ setwd('/Users/kindaixin/MEGA/09 Developing Data Product/project/slidify')
 author("private_prop_predictor")
 
 setwd('/Users/kindaixin/MEGA/09 Developing Data Product/project/slidify/private_prop_predictor')
+
+#publish to git hub as git page
+publish(user = "jaxxie", repo = "condopricepredictionslidify")
